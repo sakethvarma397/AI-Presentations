@@ -1,0 +1,88 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+#root {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 700px;
+  background-image: linear-gradient(to bottom right, #f0f8ff, #c8e3fb);
+}
+
+.loader {
+  display: block;
+  width: 15px;
+  aspect-ratio: 1.2;
+  --c: no-repeat linear-gradient(#000 0 0);
+  background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+  background-size: 20% 100%;
+  animation: l1 1s infinite linear;
+}
+@keyframes l1 {
+  0% {
+    background-size: 20% 100%, 20% 100%, 20% 100%;
+  }
+  33% {
+    background-size: 20% 10%, 20% 100%, 20% 100%;
+  }
+  50% {
+    background-size: 20% 100%, 20% 10%, 20% 100%;
+  }
+  66% {
+    background-size: 20% 100%, 20% 100%, 20% 10%;
+  }
+  100% {
+    background-size: 20% 100%, 20% 100%, 20% 100%;
+  }
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.input-container textarea {
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.input-button button {
+  width: 160px;
+  margin-left: 5px;
+  background-color: #c8e3fb;
+  display: flex;
+  justify-content: center;
+}
+
+.pdf-button button {
+  width: 220px;
+  margin-left: 5px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+.summary-container {
+  height: 500px;
+  overflow: auto;
+  margin: 20px 0;
+  padding: 0 20px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.download-container {
+  width: 200px;
+}
